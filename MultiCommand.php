@@ -2,8 +2,16 @@
 
 class MultiCommand
 {
-    public function multi(int $a, int $b) : int {
-        return $a * $b;
+    private $current = 0;
+
+    public function __construct(int $a) {
+        $this->current = $a;
+    }
+
+    public function do(int $b) : int {
+        $this->current *= $b;
+
+        return $this->current;
     }
 }
 
