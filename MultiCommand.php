@@ -1,6 +1,7 @@
 <?php
+include_once 'php-common-lib/Command.php';
 
-class MultiCommand
+class MultiCommand implements Command
 {
     private $current = 0;
 
